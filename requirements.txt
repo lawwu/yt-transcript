@@ -1,0 +1,5 @@
+click
+pytest
+youtube-transcript-api
+openai>=1.0.0
+yt-dlp>=2025.2.19

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-transcript"
+version = "0.1.0"
+description = "YouTube transcript fetcher and summarizer"
+authors = [
+    {name = "Lawrence Wu"}
+]
+
+[project.scripts]
+yt-transcript = "yt_transcript.cli:yt_transcript_cli" 
