@@ -52,6 +52,7 @@ uv publish --token $PYPI_TOKEN
 
 ## TODO
 
-- [ ] Add local Whisper transcription fallback if no transcript is available
 - [x] Remove fetch keyword
+- [ ] Add local Whisper transcription fallback if no transcript is available
+- [ ] Parallelize LLM calls to summarize
 - [ ] Create dev and main branches. Add Github Action to test and publish to PyPi.
