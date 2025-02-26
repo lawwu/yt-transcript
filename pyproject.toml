@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yt-transcript"
-version = "0.1.0"
+version = "0.1.1"
 description = "YouTube transcript fetcher and summarizer"
 authors = [
     {name = "Lawrence Wu"}

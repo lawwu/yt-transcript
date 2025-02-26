@@ -26,19 +26,24 @@ export OPENAI_API_KEY=<your-openai-api-key>
 Fetch transcript
 
 ```bash
-yt-transcript fetch "https://www.youtube.com/watch?v=7xTGNNLPyMI"
+yt-transcript https://www.youtube.com/watch?v=7xTGNNLPyMI
 
-yt-transcript fetch https://www.youtube.com/watch?v=IziXJt5iUHo
+yt-transcript https://www.youtube.com/watch?v=IziXJt5iUHo
 ```
 
 Fetch transcript and summarize (videos that have chapters)
 ```bash
-yt-transcript fetch "https://www.youtube.com/watch?v=7xTGNNLPyMI" --summarize --markdown
+yt-transcript https://www.youtube.com/watch?v=7xTGNNLPyMI --summarize --markdown
 
-yt-transcript fetch https://www.youtube.com/watch?v=IziXJt5iUHo --summarize --markdown
+yt-transcript https://www.youtube.com/watch?v=IziXJt5iUHo --summarize --markdown
 ```
 
 Fetch transcript and summarize (videos that don't have chapters)
 ```bash
-yt-transcript fetch https://www.youtube.com/watch?v=f0RbwrBcFmc&ab_channel=LangChain --summarize --markdown
+yt-transcript https://www.youtube.com/watch?v=f0RbwrBcFmc&ab_channel=LangChain --summarize --markdown
 ```
+
+## TODO
+
+- [ ] Add local Whisper transcription fallback if no transcript is available
+- [x] Remove fetch keyword

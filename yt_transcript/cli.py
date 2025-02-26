@@ -11,31 +11,32 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-@click.group()
+@click.command()
+@click.argument('url', required=False)
 @click.option('--verbose', is_flag=True, help='Enable verbose logging')
-def yt_transcript_cli(verbose):
-    """YouTube Transcript CLI - fetch and process YouTube video transcripts."""
-    if verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
-        logger.debug("Verbose logging enabled")
-
-@yt_transcript_cli.command()
-def main():
-    """Main command."""
-    click.echo("Welcome to YouTube Transcript CLI!")
-    logger.info("Use --help to see available commands.")
-
-@yt_transcript_cli.command()
-@click.argument('url')
 @click.option('--no-cache', is_flag=True, help='Bypass cache and fetch fresh transcript')
 @click.option('--summarize', is_flag=True, help='Generate a summary of the transcript')
 @click.option('--markdown', is_flag=True, help='Output summary in markdown format')
 @click.option('--output-file', '-o', help='Output file path for summary (default: {video_id}_summary.md for markdown)')
 @click.option('--no-save-transcript', is_flag=True, help='Do not save transcript to a text file')
 @click.option('--transcript-file', help='Output file path for transcript (default: {video_id}_transcript.txt)')
-def fetch(url: str, no_cache: bool, summarize: bool, markdown: bool, output_file: str, 
-          no_save_transcript: bool, transcript_file: str):
-    """Fetch transcript for a YouTube video."""
+@click.option('--chapters', is_flag=True, help='Display chapters for the video')
+def yt_transcript_cli(url, verbose, no_cache, summarize, markdown, output_file, 
+                     no_save_transcript, transcript_file, chapters):
+    """YouTube Transcript CLI - fetch and process YouTube video transcripts.
+    
+    Provide a YouTube URL or video ID to fetch its transcript.
+    """
+    if verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+        logger.debug("Verbose logging enabled")
+    
+    if not url:
+        click.echo("Welcome to YouTube Transcript CLI!")
+        click.echo("Please provide a YouTube URL or video ID to fetch a transcript.")
+        click.echo("Use --help to see available options.")
+        return
+    
     try:
         # Extract video ID from URL
         if 'youtube.com' in url or 'youtu.be' in url:
@@ -48,9 +49,25 @@ def fetch(url: str, no_cache: bool, summarize: bool, markdown: bool, output_file
         else:
             # Assume the input is already a video ID
             video_id = url
-
-        logger.info(f"Fetching transcript for video ID: {video_id}")
+        
         fetcher = transcript_fetcher.TranscriptFetcher()
+        
+        # If chapters flag is set, just display chapters and exit
+        if chapters:
+            video_info = fetcher.get_video_info(video_id)
+            
+            if video_info['chapters']:
+                click.echo(f"\nFound {len(video_info['chapters'])} chapters in video:")
+                for chapter in video_info['chapters']:
+                    click.echo(f"\n{chapter['title']}")
+                    click.echo(f"Start: {chapter['start']} seconds")
+                    click.echo(f"End: {chapter['end']} seconds")
+            else:
+                click.echo("No chapters found in video")
+            return
+        
+        # Otherwise, fetch transcript
+        logger.info(f"Fetching transcript for video ID: {video_id}")
         transcript = fetcher.fetch_transcript(video_id, no_cache=no_cache)
         
         if not transcript:
@@ -102,38 +119,6 @@ def fetch(url: str, no_cache: bool, summarize: bool, markdown: bool, output_file
         logger.error(f"Error parsing URL: {str(e)}")
     except Exception as e:
         logger.error(f"Failed to fetch transcript: {str(e)}")
-
-@yt_transcript_cli.command()
-@click.argument('url')
-def chapters(url: str):
-    """Fetch and display chapters for a YouTube video."""
-    try:
-        # Extract video ID from URL
-        if 'youtube.com' in url or 'youtu.be' in url:
-            if 'youtube.com/watch?v=' in url:
-                video_id = url.split('watch?v=')[1].split('&')[0]
-            elif 'youtu.be/' in url:
-                video_id = url.split('youtu.be/')[1].split('?')[0]
-            else:
-                raise ValueError("Invalid YouTube URL format")
-        else:
-            # Assume the input is already a video ID
-            video_id = url
-
-        fetcher = transcript_fetcher.TranscriptFetcher()
-        video_info = fetcher.get_video_info(video_id)
-        
-        if video_info['chapters']:
-            click.echo(f"\nFound {len(video_info['chapters'])} chapters in video:")
-            for chapter in video_info['chapters']:
-                click.echo(f"\n{chapter['title']}")
-                click.echo(f"Start: {chapter['start']} seconds")
-                click.echo(f"End: {chapter['end']} seconds")
-        else:
-            click.echo("No chapters found in video")
-            
-    except Exception as e:
-        logger.error(f"Error: {str(e)}")
 
 if __name__ == '__main__':
     yt_transcript_cli() 
