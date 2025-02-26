@@ -1,5 +1,10 @@
 # yt-transcript
 
+[![PyPI version](https://badge.fury.io/py/yt-transcript.svg)](https://badge.fury.io/py/yt-transcript)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
 A command-line tool to fetch, cache, and summarize YouTube video transcripts. Optionally generate AI-powered summaries.
 
 ## Features
