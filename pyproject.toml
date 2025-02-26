@@ -4,11 +4,29 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yt-transcript"
-version = "0.1.1"
-description = "YouTube transcript fetcher and summarizer"
+version = "0.1.2"
+description = "A command-line tool to fetch, cache, and summarize YouTube video transcripts"
+readme = "README.md"
 authors = [
     {name = "Lawrence Wu"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "youtube_transcript_api",
+    "openai",
+    "requests",
+    "click",
 ]
 
 [project.scripts]
 yt-transcript = "yt_transcript.cli:yt_transcript_cli" 
+
+[project.urls]
+"Homepage" = "https://github.com/lawwu/yt-transcript"
+"Bug Tracker" = "https://github.com/lawwu/yt-transcript/issues" 
