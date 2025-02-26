@@ -43,7 +43,15 @@ Fetch transcript and summarize (videos that don't have chapters)
 yt-transcript https://www.youtube.com/watch?v=f0RbwrBcFmc&ab_channel=LangChain --summarize --markdown
 ```
 
+## Publish to PyPI
+
+```bash
+uv build
+uv publish --token $PYPI_TOKEN
+```
+
 ## TODO
 
 - [ ] Add local Whisper transcription fallback if no transcript is available
 - [x] Remove fetch keyword
+- [ ] Create dev and main branches. Add Github Action to test and publish to PyPi.
