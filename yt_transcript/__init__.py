@@ -1,1 +1,1 @@
-"""YouTube Transcript CLI tool.""" 
+"""YouTube Transcript CLI tool."""

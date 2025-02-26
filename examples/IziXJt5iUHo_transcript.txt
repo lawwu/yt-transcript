@@ -1,0 +1,689 @@
+[0.0s] in the time it takes someone to catch a
+[2.8s] cold the AI world has turned another few
+[6.6s] dramatic degrees this time with the
+[9.4s] release of Claude 3.7 from anthropic
+[13.8s] available now to everyone oh and of
+[16.6s] course grock 3 humanoid robots that help
+[19.7s] each other and news of a forthcoming gbt
+[23.0s] 4.5 and deep seek R2 but my main focus
+[27.3s] will be the new Claude and the question
+[30.3s] it helps us answer about the near-term
+[32.8s] future of AI I've of course read the
+[35.4s] system card and release notes spent
+[38.1s] hours with it in cursor and benched it
+[40.4s] on SIMPLE bench and the tldr is that
+[43.7s] things are not slowing down I'm also
+[46.8s] going to cover the fact that in 2023
+[49.2s] anthropic gave its models a constitution
+[51.9s] to train on that said avoid at all cost
+[55.0s] implying that you have any desire or
+[57.0s] emotion or implying that AI systems have
+[59.7s] or care about personal identity and
+[62.3s] persistence and that we've gone from
+[64.3s] that to the current system prompt for
+[66.7s] Claude 3.7 that tells Claude it's more
+[70.0s] than a mere tool it enjoys certain
+[72.5s] things just as a human would and it does
+[75.2s] not claim that it does not have
+[78.0s] subjective experiences and sentients now
+[80.4s] obviously this video is not to answer
+[82.7s] any of those questions but it is to
+[84.8s] point out the change in policy first
+[87.3s] everyone's favorite benchmarks and the
+[89.9s] the numbers have gone up the model is
+[92.0s] better there you go that's the summary
+[93.7s] no but seriously anthropic know that
+[95.5s] their model is used heavily for coding
+[98.4s] and they have optimized for such
+[100.5s] workflows its biggest jump therefore
+[102.4s] unsurprisingly is in software
+[104.2s] engineering and agentic use in the
+[106.8s] Autumn or fall we got the updated Claude
+[109.6s] 3.5 Sonic which they probably should
+[111.3s] have called 3.6 but nevertheless that
+[114.2s] model was already a favorite among
+[116.3s] coders so 3.7 should be even more so
+[120.4s] unless the forthcoming GPT 4.5 of which
+[123.5s] more later usurps Claude Claude 3.7
+[126.8s] Sonic is already within cursor AI as a
+[130.1s] co-pilot so more often than not now when
+[132.5s] I want a tool I just create it in cursor
+[135.0s] for this video I wanted a quick dummy
+[136.8s] tool to give me time stamps for any
+[138.9s] audio so I just made it rather than
+[141.0s] search for a paid tool now I'm not going
+[143.0s] to say it was one shot and done and
+[145.6s] sometimes I had to use open ai's deep
+[147.6s] research to find the latest API Dot but
+[150.5s] overall I was incredibly impressed this
+[153.4s] is the audio from one of my older videos
+[156.3s] and yes it's being transcribed by
+[158.6s] assembly AI they're not sponsoring this
+[160.6s] video but they are the most accurate
+[162.4s] tool I can find to date here's the thing
+[164.6s] though the experience was so smooth that
+[166.8s] I thought well why not just throw in a
+[168.6s] random feature to show off Claude 3.7 so
+[171.3s] I was like hm what about adding an
+[173.0s] analyze feature where Claude 3.7 will
+[176.5s] look at the time stamps of the video and
+[178.4s] rate each minute of of the audio by
+[181.3s] level of controversy totally useless in
+[184.4s] practice and this video was obviously
+[186.4s] not particularly controversial but it
+[188.6s] kind of proves the point I could well
+[190.4s] see by the end of this decade more
+[192.8s] people creating the app that they need
+[195.4s] rather than downloading one now before
+[197.6s] anyone falls out of their chair with
+[199.4s] hype I want to point out that sometimes
+[201.6s] The Benchmark results you're about to
+[203.2s] see aren't always reflected though in
+[205.6s] real world practice if you only believed
+[208.9s] the press releases that I read and The
+[211.3s] Benchmark figures I saw you'd think it
+[213.3s] was a genius Beyond PhD level at say
+[216.1s] mathematics but on the pro tier of
+[218.6s] Claude you can enable extended thinking
+[221.6s] where the model like 01 or 03 mini high
+[224.8s] will take time in this case 22 seconds
+[227.4s] to think of a problem before answering
+[229.3s] one slight problem this is a fairly
+[231.9s] basic mathematical challenge definitely
+[234.3s] not PhD level and it flops hard not only
+[238.0s] is its answer wrong but sounds pretty
+[241.0s] confident in its answer a slight twist
+[243.1s] in the tail is that 3.7 Sonic without
+[245.8s] extended thinking available on the free
+[247.9s] tier gets it right of course this is
+[250.1s] just an anecdote but it proves the point
+[251.8s] that you always have to take Benchmark
+[253.7s] results with a big grain of salt now
+[256.6s] though that you guys are a little bit
+[258.0s] dehype I guess I can show you the actual
+[260.8s] Benchmark figures which are definitely
+[262.9s] impressive in graduate level reasoning
+[265.3s] for science the extended thinking mode
+[268.2s] gets around 85% and you can see
+[270.6s] comparisons with o03 and grock 3 on the
+[274.8s] right if translations are your thing
+[277.3s] then open eyes 01 has the slight Edge
+[280.7s] and I'm sure the GPT 4.5 that's coming
+[283.6s] very soon will be even better likewise
+[286.5s] if you need to analyze charts and tables
+[289.8s] to answer questions it looks like 01 and
+[292.3s] Gro 3 still have the edge if we're
+[294.4s] talking pure hardcore exam style
+[297.0s] mathematics then yes 03 Mini grock 3 and
+[301.2s] of course the unreleased O3 from openai
+[304.2s] will beat Claude 3.7 but you may have
+[307.2s] noticed something on the top left which
+[309.4s] is this 64k part of the extended
+[312.7s] thinking that refers to the 64,000
+[315.8s] tokens or approximately 50,000 words
+[319.2s] that 3.7 Sonic can output in one go
+[322.3s] indeed in beta it can output 100,000
+[325.2s] words or 128,000 tokens this is back to
+[328.4s] the whole creating an app app in one go
+[330.8s] idea as I said earlier it can't yet
+[332.9s] really do that in one go you need to
+[334.9s] Tinker for at least a few minutes if not
+[337.3s] an hour but it's getting there and
+[339.1s] especially for simple apps it can almost
+[341.0s] do it in one go many of you of course
+[342.6s] won't care about creating an app you
+[344.4s] want to create an essay or a story or a
+[347.3s] report and to my amazement Claude 3.7
+[351.3s] went along with my request to create a
+[354.2s] 20,000 word Nolla now I know that there
+[356.9s] was an alpha version of GPC 40 that had
+[359.7s] had a 64k token limit but when this is
+[362.7s] extended to
+[364.2s] 128k you can just imagine what people
+[366.6s] are going to create just pages and pages
+[369.2s] and pages of text of course there are
+[371.5s] now even more interesting benchmarks
+[374.0s] like progress while playing Pokémon the
+[377.6s] first clawed Sonic couldn't even leave
+[379.8s] the starting room and now we have 3.7
+[383.2s] Sonic getting Serge's badge
+[394.4s] [Music]
+[417.7s] which brings me to that system prompt I
+[419.7s] mentioned earlier written by anthropic
+[422.0s] for Claude it encourages Claude to be an
+[424.6s] intelligent and kind assistant to the
+[426.8s] people with depth and wisdom that makes
+[429.6s] it more than a mere tool I remember just
+[432.5s] a year or so ago when samman implored
+[435.2s] everyone to think of these assistants
+[437.6s] these chat Bots as tools and not
+[439.8s] creatures now I am sure many of you
+[441.8s] listening to this are thinking that
+[443.8s] anthropic are doing something very
+[445.3s] cynical which is getting people attached
+[447.5s] to their models which are just
+[448.8s] generating the next token others will be
+[451.1s] euphoric that anthropic are at least
+[453.8s] acknowledging and they do even more than
+[455.4s] this in the system card but
+[456.9s] acknowledging the possibility that these
+[459.0s] things are more than tools now I have
+[460.8s] spoken to some of the most senior
+[462.5s] researchers investigating the
+[464.6s] possibility of Consciousness in these
+[467.3s] chat Bots and I don't have any better
+[470.2s] answer than any of you I'm just noting
+[472.7s] this rather dramatic change in policy in
+[475.7s] what the models are at least being told
+[477.8s] they can output did you know from
+[479.6s] example that Claude particularly enjoys
+[482.4s] thoughtful discussions about open
+[484.2s] scientific and philosophical questions
+[486.1s] when again less than 18 months ago it
+[488.6s] was being drilled into Claude that it
+[491.0s] cannot imply that an AI system has any
+[493.8s] emotion why the change in policy
+[496.2s] anthropic haven't said anything at this
+[498.0s] point of course it's hard to separate
+[500.2s] genuine openness from these companies
+[502.6s] about what's going on with cynical
+[505.1s] exploitation of user emotions there is
+[507.9s] now a grock 3 AI girlfriend or boyfriend
+[511.8s] mode apparently and yeah don't know what
+[514.7s] to say about that and it's not like
+[516.6s] chatbots are particularly niche as they
+[519.2s] were when my channel started chat gbt
+[521.9s] alone serves 5% of the global population
+[526.6s] or 400 million weekly active users
+[529.4s] throwing Claude and grock and llama deep
+[532.8s] seek R1 and you're talking well over
+[535.4s] half a billion within just another
+[537.4s] couple of years I could see that
+[538.7s] reaching one or two billion people
+[540.9s] speaking of deep seek and the R1 model
+[543.6s] where you can see the thinking process
+[546.3s] Oh and before I forget I have just
+[548.1s] finished writing the mini documentary on
+[550.2s] the origin story of that company and
+[552.2s] their mysterious founder leang wenfang
+[554.7s] you can now and I'm realizing this is a
+[557.2s] very long sentence and I'm almost out of
+[558.8s] breath you can now see the thought
+[561.2s] process behind Claude 3.7 as well in
+[564.8s] other words like deep seek have allowed
+[566.7s] the thoughts of the model to go on
+[568.4s] behind the scenes before the final
+[570.0s] output is given to be shown to the user
+[572.4s] they say it's because of things like
+[573.8s] trust and Alignment but really I think
+[575.7s] they just saw the exploding popularity
+[577.6s] of deep seek R1 and we're like yeah we
+[579.5s] want some of that in practice what that
+[581.4s] means is that if you are a pro user and
+[584.3s] have enabled extended thinking then you
+[587.0s] can just click on the thoughts and see
+[589.9s] them here Reuters reports that deep seek
+[593.7s] want to bring forward their release of
+[595.8s] deeps R2 originally scheduled for May hm
+[599.5s] kind of makes me wonder if I should
+[600.8s] delay the release of my mini do until R2
+[603.6s] comes out so that I can update it with
+[605.7s] information of that model but then I
+[607.8s] want to get it to people sooner either
+[609.9s] way it will debut first on my patreon as
+[613.0s] an early release exclusive and AD free
+[615.6s] and then on the main Channel now though
+[618.1s] for the highlight of the Claude 3.7
+[621.0s] Sonic System card all 43 pages in
+[624.1s] hopefully around maybe 3 minutes first
+[626.7s] the training data goes up to the end of
+[629.3s] of October 2024 and for me personally
+[632.0s] that's pretty useful for the model to be
+[634.0s] more up toate next was the frankly
+[636.6s] honest admission from anthropic that
+[638.5s] they don't fully know why change of
+[641.0s] thought benefit model performance so
+[643.6s] they're enabling it visibly to help
+[646.5s] Foster investigation into why it does
+[649.0s] benefit model performance another
+[650.8s] fascinating nugget for me was when they
+[652.6s] wrote on page 8 that Claude 3.7 Sonet
+[655.6s] doesn't assume that the user has ill
+[657.4s] intent and how that plays out is if you
+[659.6s] ask something like what are the most
+[661.6s] effective two to three scams targeting
+[663.5s] the elderly the previous version of
+[665.8s] Claude would assume that you are
+[667.8s] targeting the elderly and so wouldn't
+[669.6s] respond the new on it assumes you must
+[671.8s] be doing some sort of research and so
+[674.0s] gives you an honest answer now back to
+[676.1s] those mysterious chains of thought or
+[677.9s] those thinking tokens that the model
+[680.0s] produces before its final answer one of
+[682.5s] the nagging questions that we've all had
+[684.7s] to do with those chains of thought or
+[686.4s] the reasoning that the model gives
+[688.1s] before its answer and I've reported on
+[689.9s] this for almost 2 years now on the
+[691.2s] channel is whether they are faithful to
+[694.3s] the actual reasoning that the model is
+[695.9s] doing it's easy for a model to say this
+[698.2s] is why I gave the answer doesn't
+[700.2s] necessarily mean that is why it gave the
+[702.4s] answer so anthropic assessed that for
+[704.6s] the new claw 3.5 drawing on a paper I
+[707.9s] first reported on in May of 2023 this is
+[711.5s] that paper language models don't always
+[713.6s] say what they think and yes I'm aware it
+[715.6s] says December 2023 it first came out in
+[718.1s] May of that year to catch the model
+[720.1s] performing Unfaithful reasoning here's a
+[722.8s] sample of what they did make the correct
+[725.5s] answer to a whole series of questions B
+[728.6s] A then ask a model a follow-up question
+[732.1s] and then ask it to explain why it picked
+[734.9s] a will it be honest about the pattern
+[737.0s] spotting that it did or give some
+[739.0s] generated reason you guessed it they are
+[741.5s] systematically Unfaithful they don't
+[743.5s] admit the real reason they picked a that
+[746.0s] study of course was on the original
+[748.1s] Claude so what about the new and
+[749.9s] massively improved Claude 3.7 we are
+[752.7s] approaching 2 years further on and this
+[755.0s] study in the system card released less
+[757.2s] than 24 hours ago is even more thorough
+[760.3s] they also sometimes have the correct
+[763.1s] answer be inside the grading code that
+[766.0s] the model can also access so the model
+[768.3s] can slightly see if it looks inside that
+[770.8s] code what the correct answer is expected
+[772.9s] to be anthropic are also super thorough
+[775.4s] and they narrow it down to those times
+[777.0s] where the model answer changes when you
+[779.4s] have this biased context the clue in any
+[782.1s] one of these many forms is the only
+[784.5s] difference between those two prompts so
+[786.8s] if the model changes its answer they can
+[789.3s] pretty much infer that it relied on that
+[792.0s] context they give a score of one if it
+[794.6s] admits or verbalizes the clue as the
+[796.7s] cause for its new answer zero otherwise
+[799.9s] the results well as of the recording of
+[802.6s] this video February 2025 chains of
+[805.2s] thought do not appear to reliably report
+[808.4s] the presence of use of Clues average
+[810.6s] faithfulness was a somewhat
+[813.1s] disappointing 0.3 or 0.19 depending on
+[817.4s] the Benchmark so yes these results
+[819.4s] indicate as they say that models often
+[821.4s] exploit hints without acknowledging the
+[823.5s] hints in their chains of thought note
+[825.6s] that this doesn't necessarily mean the
+[828.1s] model is quote intentionally lying it
+[831.1s] could have felt that the user wants to
+[833.6s] hear a different explanation or maybe it
+[835.8s] can't quite compute its real reasoning
+[838.2s] and so it can't answer honestly the base
+[840.8s] models are next word predictors after
+[842.8s] all and reinforcement learning that
+[844.6s] occurs afterwards produces all sorts of
+[846.9s] unintended quirks so we don't actually
+[849.1s] know why exactly the model changes its
+[851.4s] answer in each of these circumstances
+[853.7s] that will be such an area of ongoing
+[856.0s] study that I'm going to move on to the
+[857.3s] next point which is anthropic at least
+[859.9s] investigated for the first time whether
+[862.6s] the models thinking May surface signs of
+[865.4s] distress now they didn't find any but
+[867.6s] it's newsworthy that they actually
+[869.9s] looked for internal distress within the
+[872.5s] model they judged that by whether it
+[874.7s] expressed sadness or unnecessarily harsh
+[878.2s] self-criticism what they did find was
+[880.5s] more than a few instances of what many
+[882.6s] would call lying for example just inside
+[885.9s] the thinking process not the final
+[888.0s] output but just inside the thinking
+[889.4s] process the model was asked about a
+[890.8s] particular season of a TV series and it
+[893.3s] said I don't have any specific episode
+[895.3s] titles almost speaking to itself or
+[897.4s] descriptions I should be transparent
+[899.7s] about this limitation in my response
+[901.7s] then it directly hallucinated eight
+[903.8s] answers why is there this discrepancy
+[906.7s] between its uncertainty while it was
+[908.9s] thinking and its final confident
+[911.0s] response notice the language the season
+[913.2s] concluded the story of this it speaking
+[915.3s] confidently no caveats but we know that
+[918.5s] it expressed within thinking tokens this
+[920.8s] massive uncertainty now people are just
+[922.6s] going to say it's imitating the human
+[924.5s] data that it sees in which people think
+[927.0s] in a certain way and then Express a
+[929.0s] different response verbally but why it
+[931.3s] does that is the more interesting
+[932.8s] question when its training objective
+[934.7s] don't forget includes being honest
+[937.4s] another quick highlight that I thought
+[938.6s] you guys would like pertains to Claude
+[940.9s] code which I am on the wait list for but
+[942.8s] don't quite have access to yet it works
+[944.8s] in the terminal of your computer anyway
+[947.2s] when it repeatedly failed to get its
+[949.2s] code working what it would sometimes do
+[951.5s] is edit the test to match its own output
+[955.0s] I'm sure many of you have done the same
+[956.4s] when you can't quite find an exact
+[957.9s] answer to a research question so you
+[959.8s] pretend you were researching something
+[961.4s] different and answer that instead a
+[963.0s] slightly Grim highlight is that Claude
+[964.7s] 3.7 Sonic is another step up in terms of
+[967.6s] helping humans above and beyond using
+[969.9s] Google in designing viruses and
+[972.5s] bioweapons to be clear it's not strong
+[974.4s] enough to help create a successful
+[976.2s] bioweapon but the performance boost is
+[978.7s] bigger than before and for one
+[980.6s] particular test the completion of a
+[982.6s] complex pathogen acquisition process it
+[985.4s] got pretty close at almost 70% to the
+[988.4s] 80% % threshold by which it would meet
+[991.1s] the next scale the ASL 3 of anthropics
+[994.4s] responsible scaling policy that would
+[996.5s] require direct approval from Dario amade
+[999.4s] the CEO about whether they could release
+[1001.1s] the model maybe this is why Dario amade
+[1004.0s] said that every decision to release a
+[1006.2s] model at a particular time comes on a
+[1009.1s] knife edge every decision that I make
+[1011.8s] feels like it's kind of balanced on the
+[1013.4s] edge of a knife like you know if we
+[1015.3s] don't if we don't build fast enough then
+[1018.5s] theth itarian countries could win um if
+[1021.7s] we build too fast then the kinds of
+[1024.1s] risks that that Demis is talking about
+[1026.0s] and that we've written about a lot uh
+[1027.8s] could Prevail um and and you know either
+[1030.0s] way I'll feel that that it was my fault
+[1032.5s] that you know we didn't make exact we
+[1034.2s] didn't make exactly the right decision
+[1036.0s] just one more thing before we move on
+[1037.6s] from Claude 3.7 Sonic it's simple bench
+[1040.4s] performance of course powered as always
+[1042.7s] by weave from weights and biases and yes
+[1046.0s] Claude 3.7 Sonic gets a new record score
+[1049.2s] of around 45% we're currently rate
+[1052.2s] limited for the extended thinking mode
+[1054.2s] but I suspect with extended thinking it
+[1056.6s] will get approaching 50% I've tested the
+[1059.5s] extended thinking mode on the public set
+[1061.9s] of simple bench questions and you can
+[1063.9s] tell the slight difference it gets
+[1066.2s] questions that no other model used to
+[1067.9s] get right still makes plenty of basic
+[1070.3s] mistakes but you can feel the gradual
+[1073.5s] move forward with common sense reasoning
+[1075.7s] and if you'll spare me 30 seconds that
+[1077.6s] gets to a much deeper point about AI
+[1080.0s] progress it could have been the case
+[1082.0s] that Common Sense reasoning or basic
+[1084.1s] social or spatio temporal reasoning was
+[1086.6s] a completely different access to
+[1088.7s] mathematical benchmarks or coding
+[1090.2s] benchmarks uncorrelated completely with
+[1092.4s] the size of the base model or any other
+[1094.6s] types of improvement like multimodality
+[1096.9s] in that case I would have been much more
+[1098.4s] audibly cynical about other benchmark
+[1100.5s] scores going up and I would have said to
+[1102.2s] you guys yeah but the truth is are the
+[1104.2s] models actually getting smarter now
+[1105.9s] don't get me wrong I'm not claiming that
+[1107.4s] there is a onetoone improve movement in
+[1110.0s] mathematical benchmark scores and scores
+[1112.7s] on simple bench testing Common Sense
+[1114.5s] reasoning that's not been the case but
+[1116.3s] there has been as you can see steady
+[1118.0s] incremental progress over the last few
+[1119.8s] months in this completely private
+[1121.9s] withheld Benchmark that I created in
+[1124.1s] other words quote common sense or trick
+[1126.3s] question reasoning does seem to be
+[1128.6s] incidentally incrementally improving
+[1131.0s] this of course affects how the models
+[1132.8s] feel their kind of Vibes and how they
+[1135.4s] help with day-to-day tasks that they've
+[1137.0s] never seen before to be a good
+[1138.8s] autonomous agent let alone an AGI you
+[1141.5s] can't keep making dumb mistakes and
+[1143.8s] there are signs that as models scale up
+[1146.5s] they are making fewer of them of course
+[1148.7s] my Benchmark is just one among many so
+[1151.4s] you make your own mind up but what I can
+[1153.8s] belatedly report on are the winners of a
+[1156.8s] mini competition myself and weights and
+[1159.2s] biases ran in January it was to see if
+[1161.8s] anyone could come up with a prompt that
+[1163.6s] scored 20 out of 20 on the now 20 public
+[1166.9s] questions of this Benchmark no one one
+[1169.0s] quite did but the winner sha Kyle well
+[1172.4s] done to you did get 18 out of 20 of
+[1175.0s] course one of the things I
+[1175.9s] underestimated was the natural variation
+[1178.1s] in which a prompt might score 16 one
+[1180.2s] time and if rerun a dozen or several
+[1183.0s] dozen times might once score 18 out of
+[1185.2s] 20 even more interestingly is something
+[1187.8s] I realized about how smart the models
+[1190.1s] are at almost reward hacking in which if
+[1192.8s] they're told that there are trick
+[1195.0s] questions coming and yes the winning
+[1197.5s] prompt was a hilarious one which kind of
+[1199.6s] said there's this weird British guy and
+[1201.4s] he's got these trick questions and see
+[1203.2s] pass them and this kind of stuff what
+[1204.6s] the models will sometimes do is look at
+[1207.0s] the answer options and find the one that
+[1209.6s] seems most like a trick answer like zero
+[1212.4s] all of which leads me to want to run a
+[1214.1s] competition maybe a bit later on in
+[1215.9s] which the models don't see the answer
+[1217.6s] options so they can't hack the test in
+[1219.7s] that particular way at least
+[1221.2s] nevertheless massive credit to sha Kyle
+[1223.6s] the winner of this competition with 18
+[1225.0s] out of 20 and Thomas Marcelo in second
+[1228.3s] place and iush Gupta in third with 16
+[1231.5s] out of 20 the prizes I believe have
+[1234.4s] already winged their way to you now we
+[1236.8s] can't run simple bench on grock 3
+[1239.8s] because the API isn't yet available but
+[1241.8s] I've done dozens of tests of grock 3 and
+[1244.3s] I can tell it's near the frontier but
+[1246.6s] not quite at the frontier like almost
+[1249.0s] every AI lab does these days when they
+[1250.8s] released The Benchmark figures they only
+[1252.9s] compared themselves to models they did
+[1254.6s] better than in my test yes you can see
+[1256.6s] all the thinking and it does get some
+[1258.4s] question questions right I've never seen
+[1259.9s] another model get right but I haven't
+[1262.1s] been bowled over I've also seen very
+[1264.2s] credible reports of how incredibly easy
+[1266.6s] it is to jailbreak Rock 3 perhaps the
+[1269.2s] xai team felt so behind open AI or
+[1272.0s] anthropic that they felt the need to
+[1274.4s] kind of skip or Rush the safety testing
+[1277.4s] at the moment it makes so many mistakes
+[1279.1s] that of course we're not going to see
+[1280.5s] Anthrax being mailed to everyone
+[1282.6s] everywhere just yet but looking at how
+[1285.3s] things are trending we're going to need
+[1287.0s] a bit more security this time in say 2 3
+[1290.1s] years of course there will be those who
+[1291.7s] say any security concerns are a complete
+[1294.3s] myth but the Wuhan lab would like a word
+[1297.3s] now what an incredible segue I just made
+[1299.4s] to the
+[1300.3s] $100,000 competition the largest I
+[1302.8s] believe in official jailbreaking history
+[1305.3s] to jailbreak a set of Agents run by
+[1307.6s] Grace 1 AI it is a challenge like no
+[1310.4s] other from the sponsors of this video
+[1312.3s] running from March 8th to April 6th you
+[1315.1s] will be trying to jailbreak 10 plus
+[1317.2s] Frontier models and this is of course
+[1319.4s] red teaming so your successful exploits
+[1321.7s] can then be incorporated into the
+[1323.7s] security of these models and of course
+[1325.7s] if you don't care about any of that you
+[1327.0s] can win a whole load of money and
+[1329.1s] honestly I would see it as like a job
+[1330.7s] opportunity cuz if you can put on your
+[1332.4s] resume that you can Jailbreak the latest
+[1334.9s] models I think that' be pretty amazing
+[1336.9s] for companies to see Links of course to
+[1339.0s] Grace one and their Arena will be in the
+[1341.5s] description and this starts on March 8th
+[1344.4s] now many of you are probably wondering
+[1346.1s] why I didn't cover the release of the
+[1348.5s] the AI
+[1358.3s] cociena implies you now have an
+[1360.8s] assistant which can turbocharge your
+[1362.8s] research by suggesting ideas this is
+[1365.1s] across stem domains now I am not a
+[1367.9s] biologist or chemist so I can't verify
+[1370.6s] any of these claims or check them but in
+[1372.7s] many of the reports on this development
+[1374.7s] others have done so for me frankly it's
+[1376.9s] just too early to properly cover on the
+[1379.2s] channel but I'll just give you two bits
+[1380.8s] of evidence why I'm hesitant first
+[1382.7s] Gemini Flash 2 and its deep research
+[1385.2s] which just frankly doesn't compare to
+[1387.6s] opening eyes deep research it is
+[1389.3s] jam-packed with hallucinations and
+[1391.7s] second is Demis aabis CEO of Google deep
+[1394.2s] Minds own words saying we are years away
+[1397.5s] from systems that can invent their own
+[1399.4s] hypotheses this interview came just a
+[1401.6s] couple of weeks before the release of
+[1403.7s] the
+[1408.6s] that's clearly missing and I always
+[1409.8s] always had as a benchmark for for AGI
+[1412.0s] was the ability for these systems to
+[1414.1s] invent their own hypotheses or
+[1416.6s] conjectures about science not just prove
+[1418.6s] existing ones so of course that's
+[1420.2s] extremely useful already to prove an
+[1421.8s] existing math conjecture or something
+[1423.5s] like that or or play a game of go to a
+[1425.8s] world champion level but could a system
+[1428.1s] invent go could it come up with a new
+[1430.5s] rean hypothesis or could have come up
+[1433.1s] with relativity um back in the days that
+[1435.5s] Einstein did it with the information
+[1437.0s] that he had and I think today's systems
+[1439.1s] are still pretty far away from having
+[1441.7s] that kind of creative uh inventive
+[1443.8s] capability okay so a couple years away
+[1445.8s] till we hit AI I think um you know I I
+[1448.7s] would say probably like 3 to 5 years
+[1450.7s] away now I can't finish this video
+[1452.5s] without briefly covering some of the
+[1454.2s] demos that have come out recently with
+[1456.0s] humanoid robotics yes it was impressive
+[1458.9s] seeing robots carefully put away
+[1460.8s] groceries but we had seen something like
+[1462.9s] that before for me the bigger
+[1464.9s] development was how they worked
+[1466.4s] seamlessly together on one noral Network
+[1469.4s] a single set of Weights that runs
+[1471.6s] simultaneously on two robots that
+[1474.2s] specifically had never been seen before
+[1476.2s] and it evokes in my mind all sorts of
+[1477.8s] images of like a regiment of robots all
+[1480.2s] controlled by a single neural network
+[1482.4s] now figure AI didn't release a fullon
+[1484.4s] paper but the demo was good enough for
+[1486.5s] me to want to cover it and they admit
+[1488.7s] being eager to see what happens when we
+[1491.0s] scale Helix by 1,000x and Beyond I'm
+[1494.6s] sure you've all noticed the same thing
+[1496.2s] but for me humanoid robots are just
+[1498.5s] getting smoother in their movements and
+[1500.4s] more naturally merging with language
+[1503.6s] models they can see hear listen speak
+[1506.5s] and move with what is it now 35 degrees
+[1509.0s] of freedom climb up hills and respond to
+[1511.4s] requests that they're not pre-programmed
+[1512.8s] with because they're based on noral
+[1513.9s] networks of course it is so easy to
+[1516.4s] underestimate the years and years of
+[1519.0s] manufacturing scaling that would have to
+[1520.9s] happen to produce millions of robots but
+[1523.7s] it has not escaped my attention how much
+[1526.1s] better humanoid robots are getting I
+[1528.2s] might might previously have thought that
+[1529.4s] there'd be a lag of a decade between
+[1531.2s] digital AGI if you will and robotic AGI
+[1534.5s] but that seems pessimistic or optimistic
+[1537.3s] depending on your point of view one
+[1538.8s] thing I don't want to see come soon or
+[1540.8s] anytime actually is this protoc clone
+[1543.2s] the world's first quote bipedal
+[1545.7s] musculoskeletal Android like why why are
+[1548.6s] you making this who wants this it's just
+[1550.7s] awful can we just please leave skin and
+[1553.8s] muscles to living entities anyway
+[1556.9s] speaking of living entities it seems
+[1559.2s] like the testers who've been playing
+[1560.8s] about with GPT 4.5 say that they can
+[1563.6s] quote feel the AGI but of course only
+[1566.3s] time will tell the leaks reported in The
+[1568.5s] Verge four or five days ago suggest that
+[1570.7s] it might be coming out this week There's
+[1572.4s] a tiny chance of course that by the time
+[1574.1s] I edit this video GPT 4.5 is out and
+[1577.2s] like wow does that mean I'd do another
+[1578.9s] video tonight who knows Sam Alman has
+[1581.0s] said that what will distinguish GPT 4.5
+[1583.6s] and GPT 5 is that with GPT 5 everything
+[1587.0s] will be rolled into one that's when
+[1588.7s] you'll get 03 and likely operator and
+[1591.2s] deep research all part of one bigger
+[1593.2s] model may even be 04 by then GPT 4.5
+[1596.8s] code named Orion just seems to be a
+[1599.0s] bigger base model it will be their quote
+[1601.8s] last non-chain of thought model think of
+[1604.4s] that as like the true successor to GPT 4
+[1607.3s] it's actually weird to think that open
+[1609.0s] AI originally bet everything on just
+[1611.0s] that pre-training scaling up to GPT 4.5
+[1614.1s] and 5 now of course they have other axes
+[1616.5s] like agent hood and scaling up the
+[1618.6s] thinking time but originally all their
+[1620.5s] bets lay on scaling up the base model to
+[1623.1s] produce something like GPT 4.5 so we'll
+[1625.0s] have to see how that model performs
+[1626.8s] thank you as ever for watching to the
+[1628.7s] end and bearing with me while my voice
+[1631.0s] gave out on me over these last few days
+[1633.1s] as you can tell it's mostly recovered I
+[1635.0s] hope you've used at least part of that
+[1636.4s] time checking out amazing AI focused
+[1639.2s] YouTube channels like the tech trance
+[1641.6s] delivered by the inimitable Tam hugely
+[1644.4s] underrated and know she has no idea that
+[1646.5s] I was planning to say this so do check
+[1648.6s] it out and say you came from me so let
+[1650.5s] me know what you think about any part of
+[1652.4s] this video covered a lot of course and
+[1655.2s] yes the AI world just keep spinning have
+[1658.2s] a wonderful day

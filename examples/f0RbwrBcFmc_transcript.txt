@@ -1,0 +1,414 @@
+[2.2s] hey this is Lance from Lang Shain you've
+[3.9s] probably heard a lot about the new
+[5.2s] reasoning models from open AI such as 01
+[7.5s] and 03 I want to talk about these by
+[9.8s] reviewing some of my favorite uh new
+[12.1s] videos and uh kind of blogs I've seen on
+[14.6s] this topic but first let's just start
+[17.0s] with the current scaling Paradigm that
+[19.6s] we've been in for a number of years
+[21.2s] which is next word prediction so Jason
+[24.2s] way has a great talk on this and he kind
+[26.9s] of frames nicely why has next word I
+[30.3s] works so well and he basically explains
+[32.6s] it as nexor prediction is a multitask
+[35.2s] learning problem when you ask an LM to
+[37.8s] predict the next word or the next token
+[39.6s] in a sentence it learns a lot of things
+[42.0s] at once it learns grammar it learns
+[44.6s] World Knowledge sentiment translation
+[47.5s] spatial reasoning math so this simple
+[50.6s] learning objective is extremely powerful
+[52.6s] and there's lots of nice papers and
+[54.1s] talks on this but that just sets the
+[56.6s] stage now we've scaled this over roughly
+[60.6s] seven orders of magnitude Jason also
+[63.0s] touches on this and this is well covered
+[64.7s] in the Capal at all paper from
+[66.6s] 2020 but with respect to model size data
+[70.0s] set size and train compute the overall
+[72.0s] capability of models trained just with
+[74.2s] this kind of simple objective has gotten
+[76.9s] better now there's some interesting
+[78.8s] points here are related to the concept
+[80.5s] of emergence certain capabilities appear
+[82.9s] to be unlocked at certain scales like
+[84.5s] for example GPD 2 and three were poor at
+[86.6s] math four kind of unlock greater math
+[88.6s] capability but overall you can kind of
+[91.1s] think about the capability increasing in
+[93.4s] a Rel relatively predictable fashion
+[95.7s] with respect to size of model data set
+[98.8s] and train compute so that's kind of the
+[100.4s] Paradigm we've been in now here's kind
+[103.0s] of the catch and Jason kind of lay this
+[104.9s] out
+[105.6s] nicely next word prediction is kind of
+[107.9s] like system one thinking it's fast and
+[110.1s] intuitive but some next words are really
+[113.2s] hard to predict so for example a
+[116.2s] challenging math problem a challenging
+[117.9s] reasoning problem the problem is these
+[121.0s] models use the same amount of compute to
+[123.0s] solve easy and hard problems that's kind
+[125.0s] of the overall bottleneck with this
+[128.6s] Paradigm now a workaround that we're all
+[131.2s] probably familiar with by this point is
+[132.7s] this notion of Chain of Thought
+[133.8s] prompting this came out around 2022 and
+[136.1s] Jason way has a nice paper on it of
+[138.2s] course you prompt an LM to think step by
+[140.2s] step but what's really happening here so
+[142.5s] Nathan Lambert has a nice video on this
+[144.5s] and I thought it was really interesting
+[146.1s] you're kind of trying to enforce system
+[148.2s] to thinking which is ious and networ
+[150.6s] full so for example if you do a math
+[152.9s] problem yourself you perform a bunch of
+[154.9s] intermediate steps and those are kind of
+[157.0s] storing intermediate variables for
+[158.8s] yourself which then you utilize to
+[160.2s] generate the final solution and chaina
+[162.5s] thought it's kind of like forcing the
+[163.7s] model to produce those intermediates as
+[165.8s] tokens along its trajectory towards a
+[169.1s] solution so it's like by telling to
+[171.2s] think step by step you're actually
+[172.8s] having it produce work in the form of
+[175.0s] tokens and those tokens are kind of
+[176.7s] storing intermediate information that
+[178.2s] the model is using to form a a final
+[180.3s] answer so it's kind of like a hack to
+[184.0s] force the model from system one thinking
+[186.1s] to system two thinking so I kind of like
+[189.0s] the way that Jason lays that out and
+[190.6s] Nathan explains what's happening when
+[192.3s] you actually do
+[194.1s] CFT now this new scaling Paradigm what
+[196.8s] you see with these reasoning models is
+[198.4s] basically scaling reinforcement learning
+[200.6s] on Chain of Thought So what's actually
+[203.2s] happening here there's a nice blog post
+[204.8s] from open AI a nice video from Nathan
+[207.6s] but really the summary is that
+[210.7s] you have some training data which
+[212.3s] contains explicitly correct answers and
+[214.5s] this is important okay coding problems
+[217.2s] math problems that are verifiably
+[218.8s] correct okay you have a model that can
+[221.6s] sometimes generate correct Solutions and
+[224.1s] you have a grer that can verify whether
+[226.2s] or not a model output is correct or not
+[228.6s] okay and if it's correct you give the
+[230.3s] model a reward now this is where the
+[232.2s] reinforcement learning thing comes in
+[234.2s] you have some policy that will nudge
+[236.0s] weights so it's more likely to produce
+[237.6s] High reward outputs now you do is when
+[240.3s] you train this on this data set that has
+[242.5s] many explicitly correct answers for
+[244.9s] every problem you basically have the
+[246.9s] model produce a bunch of different
+[248.4s] trajectories and you grade them all and
+[251.2s] you reward the correct ones and over
+[253.3s] time in training you do lots of forward
+[255.5s] passes okay but you kind of tune or
+[259.0s] nudge the model to favor Chain of
+[262.0s] Thought or trajectories that result in
+[263.8s] correct answers that's the overall
+[265.4s] intuition and um I think more will come
+[268.3s] out on this but this is kind of my
+[269.8s] distillation from reading of course the
+[271.5s] blog post and some nice work by Nathan
+[273.1s] Lambert to explain a little bit more
+[274.9s] detail and here's here's a nice kind of
+[276.6s] schematic of what's going on you have
+[278.0s] your training data you have a policy to
+[279.6s] nudge your weights you have some verif
+[281.8s] verifiable reward and you're basically
+[284.4s] running your model over the training
+[286.1s] data you're doing lots of forward passes
+[288.3s] you're rewarding the correct chain of
+[290.0s] chains of thoughts that get you to
+[292.3s] correct answers that are verifiable with
+[294.6s] your greater that's the big
+[296.7s] idea now why is this exciting will
+[299.8s] represents a new scaling law so some
+[301.6s] really nice videos from gome Brown Jason
+[303.6s] way on this if you look at the recent
+[306.1s] results from 01 and now3 just dropped
+[308.8s] right before the new year uh they're
+[310.6s] obviously extremely strong okay so this
+[312.8s] is exciting now another way to think
+[315.4s] about this is I really like this slide
+[317.0s] from David rain from NPS benchmarks are
+[319.8s] getting saturated more and more quickly
+[321.6s] this is a cool visualization showing how
+[323.4s] long it takes for a benchmark to get
+[325.0s] saturated it used to be in 2012 it would
+[327.2s] take like 8 years right now it takes
+[329.8s] like a year for GP QA which is a new
+[332.2s] Benchmark made by David rain which was
+[334.8s] Google proof QA so it's question answers
+[336.7s] that are you know not easily Googled and
+[339.6s] basically we're seeing new stay there
+[341.8s] reasoning models are basically
+[343.7s] saturating on benchmarks very quickly so
+[346.6s] it's exciting we're early in the scaling
+[348.4s] curve that's the big idea
+[350.8s] here now here's where things are really
+[353.0s] interesting there's actually been a lot
+[354.1s] of confusion about 01 models with some
+[355.9s] people saying oh these actually are
+[357.3s] really bad okay now Ben hilac and um
+[361.9s] swix put out a really nice post on Laten
+[364.7s] space and it really helps to clarify
+[367.8s] when you work with these reasoning
+[368.8s] models you should not think about them
+[370.8s] as chat models and you shouldn't prompt
+[373.2s] them as such there's this nice
+[375.0s] visualization of the anatomy of no one
+[377.0s] prompt where really what you're doing is
+[378.8s] you're giving it an explicit goal you
+[381.3s] don't tell it how to think you tell it
+[382.8s] what you want you give it return format
+[385.5s] warnings and just dump all your work now
+[388.2s] a lot of people have shown that this
+[389.6s] style prompting works really well with
+[391.4s] 01 right so unlike chat models chat
+[395.3s] models you try tell it how to think
+[397.1s] you're a researcher your think step by
+[399.4s] step with these models you don't do that
+[401.6s] you give it what you want and you give
+[404.0s] it as much context as possible okay so
+[406.6s] that's really the context on how to
+[408.4s] prompt these um again focus on the what
+[412.6s] not the how don't tell to do you know
+[415.5s] particular style of reasoning just give
+[417.6s] it what you want that's the big Point
+[419.3s] here
+[420.6s] now let me show you usage very quickly
+[423.0s] first there's a few models available
+[424.4s] through the API 0101 mini one one thing
+[427.6s] I'll note mini does not support system
+[429.0s] messages that's just a small thing to
+[431.0s] note um now parameters so with o one not
+[436.6s] with o on Mini you can provide these
+[439.6s] values of reasoning effort for low
+[441.0s] medium high this just Tunes the amount
+[443.2s] of reasoning the model will do basically
+[445.2s] faster or slower responses fewer and
+[448.3s] more tokens accordingly
+[451.3s] so I'm in a notebook now I've just pip
+[453.2s] installed langine chain open AI
+[456.2s] import now I'm just using chat up and AI
+[460.0s] model o1 I'll set reasoning level to
+[462.1s] medium now note how I prompt this I tell
+[464.9s] it what I want I want an educational
+[466.4s] report on cause of mitigation for high
+[468.1s] cholesterol so this is just an example
+[470.1s] prompt tell it how I wanted to produce
+[472.4s] the output give it just a dump of stuff
+[474.1s] I'm interested in run this cool so that
+[477.8s] ran we'll look at the trace in a minute
+[479.6s] but I'll show you here in markdown
+[481.7s] here's kind of the output so you get a
+[483.1s] really nice kind of well laid out report
+[487.0s] uh on the topic of Interest right so
+[489.2s] this is really cool and it's quite
+[492.8s] exhaustive pretty nice open up the trace
+[495.9s] and I just want to show you indeed a one
+[497.8s] ran now here's what's interesting right
+[499.9s] the latency is going to be higher than
+[501.4s] you see with the chat model it took 27
+[503.2s] seconds okay fair enough and again here
+[506.6s] was my prompt as you can see we laid
+[508.7s] that out and here is the report output
+[511.6s] so it's quite
+[513.0s] exhaustive higher latency high quality
+[516.5s] lots of reasoning goes into producing
+[518.0s] the
+[518.7s] report so the o1 models work with
+[521.4s] structured outputs which is a very
+[522.9s] popular use case so let me just show you
+[525.5s] how to do that you basically Define our
+[527.2s] LM previously call with structured
+[528.9s] outputs this very nice helper method
+[531.2s] pass in a schema in this case I just
+[532.7s] have a pedantic schema so that's pretty
+[534.8s] cool and I go ahead and run
+[537.9s] that and we get a structured object out
+[540.7s] pretty
+[542.1s] cool now people are going to be very
+[544.2s] interested in this as well of course
+[545.4s] tool calling works with these models so
+[547.5s] again I just can call lm. bind tools
+[549.9s] let's say in this case I pass in a
+[552.0s] multiply tool and I make a request
+[556.4s] that's related to the tool the reasoning
+[558.1s] model decides to call the tool and I get
+[560.1s] a tool call out there we go so those are
+[563.5s] really the core things you're going to
+[564.6s] want very high quality reasoning and
+[566.2s] Report generation for example structured
+[568.8s] outputs tool calling with those
+[570.4s] Primitives you can do a huge amount of
+[572.2s] course now let me talk a little bit
+[573.8s] about use cases so here's some examples
+[575.6s] that I've seen and they're actually
+[576.8s] covered pretty nicely in swick's blog
+[578.6s] posts I think are really interesting to
+[580.2s] think about for these models so coding
+[583.3s] is obvious they're extremely strong at
+[584.9s] coding but what types of coding problems
+[587.3s] so I think McKay's done some really neat
+[589.1s] work on this so what we've heard and and
+[591.6s] seen quite a bit is these models are
+[593.7s] very strong at one-shotting entire files
+[596.5s] or sets of files so again m some nice
+[599.8s] workflows and tutorials on this how you
+[602.6s] basically give 01 a overall problem give
+[606.5s] it the opportunity to produce or IND
+[608.2s] oror edit a large set of files and it
+[610.2s] can do that often in one shot so coding
+[612.8s] is obviously a smash use case for these
+[614.6s] models and they're trained obviously on
+[616.3s] very hard coding problems they perform
+[618.4s] very well on sbench which is a popular
+[620.2s] coding Benchmark so coding is obvious
+[622.6s] and a very interesting application area
+[624.2s] for these
+[625.2s] models now another one is this notion of
+[628.5s] planning and AG and so in a lot of cases
+[631.4s] we've seen agents or agentic workflows
+[634.1s] that use some kind of pre-planning Step
+[636.2s] Up Front which kind of lays out a set of
+[638.4s] follow-on steps that may be executed by
+[640.6s] smaller llms or you know by an overall
+[643.6s] workflow okay so there's a blog post
+[646.4s] from UniFi that actually showcases this
+[648.5s] using Lang Lang graph but I think this
+[650.9s] General point about using these for
+[652.9s] upfront planning and workflows or agents
+[655.6s] is obviously a natural fit another
+[658.6s] interesting area so n Freeman kind of
+[660.4s] laid out kind of a prompt what kind of
+[662.3s] ow and outputs are scen are interesting
+[664.4s] and I think kind of reflection over
+[666.8s] sources of information could be meeting
+[668.7s] notes it could be documents is
+[670.0s] interesting you know this this uh user
+[672.4s] followed up with you know what's the
+[674.1s] most important thing no one's paying
+[675.1s] attention to pipe all your meeting
+[676.5s] transcripts in in and and kind of be
+[679.0s] surprised or amazed and so I think
+[680.4s] that's kind of a a generally interesting
+[683.0s] area for these models is kind of like
+[685.0s] deep reflection over some large sets of
+[687.8s] context it could be meeting notes it
+[689.1s] could documents it could be
+[691.0s] papers now data analysis similarly I've
+[693.7s] seen a lot of people report on utilizing
+[696.5s] these models for analyzing even things
+[698.5s] like blood tests um very good for kind
+[701.5s] of medical diagnosis or medical
+[703.3s] reasoning now of course people may not
+[705.8s] want to actually share private medical
+[707.3s] data with these with within within API
+[710.5s] totally understandable some people do
+[712.3s] but anyway I think kind of medical
+[713.9s] analysis or Diagnostics is an
+[715.2s] interesting area or other areas of data
+[716.8s] analysis are obviously very strong um
+[720.0s] for these reasoning
+[722.1s] models so another one is kind of
+[724.6s] research and Report generation so we've
+[726.4s] seen deep research from Google come out
+[728.2s] it's really interesting I think doing
+[729.6s] deep research kind of with 01 as your
+[732.8s] own kind of workflow is obviously a very
+[735.0s] nice use case for
+[737.2s] 01 Ben mentioned in his blog post at LM
+[740.1s] as judge and so basically there's a lot
+[742.1s] of interest in you using LMS as
+[743.6s] evaluators these reasoning models could
+[745.8s] be very strong for that particular use
+[747.7s] case and so I think in in any kind of
+[749.9s] workflow where you have like an
+[751.3s] evaluation step either it's online or
+[754.4s] for example offline these models could
+[756.0s] be very
+[758.6s] strong and finally I'll just make a note
+[760.7s] of kind of cognitive layer of our news
+[762.2s] feeds I think this is similar to the
+[763.4s] reasoning point above but I've actually
+[765.0s] seen a few specific examples of this um
+[767.4s] so Eric Sara uh mentioned 01 Trend
+[770.3s] finder this is pretty neat uh it's using
+[772.6s] fire crawl uh for actually content
+[775.4s] scraping and passing that to 01 to
+[777.8s] monitor no you Trends on social media I
+[781.5s] have a number of apps that do similar
+[782.8s] things and I think it's a really nice
+[784.1s] use case and I think using 01 is really
+[786.2s] cool for this swix mentioned uh in one
+[789.0s] of the podcasts that he's actually using
+[790.7s] 01 for AI news as well and so that's
+[792.9s] another good example of kind of a
+[794.7s] cognitive layer over news feeds
+[796.4s] isolating relevant information and
+[798.7s] servicing it to
+[800.0s] you so maybe just to recap briefly chap
+[803.3s] models and reasoning models are pretty
+[804.5s] different different scaling paradigms so
+[806.5s] chat models scale using next token
+[808.1s] prediction reasoning models are scaling
+[809.7s] using RL over Chain of Thought the
+[812.0s] reasoning types are different so chat
+[813.5s] models you can think of as system one
+[815.4s] fast intuitive reasoning models more
+[817.2s] like system to slow effortful now how do
+[820.6s] you work with a model what do you
+[821.9s] actually tell it with chat models we
+[823.8s] often told it how to think think step by
+[825.8s] step think as an engineer reasoning
+[827.6s] models don't tell it how to think tell
+[829.6s] it what you want here's the output I
+[831.2s] want okay interaction mode chat models
+[834.6s] chat interactive it's pulling context
+[836.6s] from the user over the course of a chat
+[838.7s] reason
+[839.6s] models they are going off and wormholing
+[842.9s] on something you don't want really
+[844.4s] necessarily to interact with them in a
+[846.0s] chat format you want to give it a deeper
+[849.0s] task and have it just go churn better
+[851.4s] for research and planning really good
+[853.9s] for things like ambient or in the
+[855.7s] background style agent so that's those
+[857.4s] are the workflows I think about more
+[858.8s] here so if you look back at our use
+[860.6s] cases things like Trend finder again
+[862.7s] this can run in the background uh LMS
+[865.4s] judge when it is running offline it's
+[867.1s] kind of in the background deep research
+[868.7s] again the background run that research
+[870.5s] process for 30 seconds 1 minute um you
+[873.6s] know a lot of these you'll see are kind
+[875.4s] of use cases that don't demand load
+[878.3s] latency they're things that can run in
+[879.6s] the background over longer periods of
+[881.2s] time to produce kind of deeper effortful
+[883.9s] outputs and so again I think overall
+[886.6s] really exciting Paradigm we're early in
+[888.9s] this trend it's absolutely worth if you
+[891.2s] have applications already using for
+[892.8s] example open AI uh you can slot in 01 uh
+[897.8s] or of course other LM slot in01 and give
+[901.5s] it a try if they fit kind of any of the
+[904.0s] use cases mentioned here and so if you
+[907.1s] have kind of good experiences or further
+[909.7s] thoughts would love to hear comments
+[911.2s] below and uh thank you very much for
+[913.6s] listening
