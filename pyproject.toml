@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yt-transcript"
-version = "0.1.2"
+version = "0.1.3"
 description = "A command-line tool to fetch, cache, and summarize YouTube video transcripts"
 readme = "README.md"
 authors = [
@@ -22,6 +22,7 @@ dependencies = [
     "openai",
     "requests",
     "click",
+    "yt-dlp",
 ]
 
 [project.scripts]
