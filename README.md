@@ -1,8 +1,9 @@
+# yt-transcript
+
 [![PyPI version](https://badge.fury.io/py/yt-transcript.svg)](https://badge.fury.io/py/yt-transcript)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-# yt-transcript
 
 A command-line tool to fetch, cache, and summarize YouTube video transcripts. Optionally generate AI-powered summaries.
 
@@ -67,7 +68,36 @@ yt-transcript https://www.youtube.com/watch?v=f0RbwrBcFmc&ab_channel=LangChain -
 pytest
 ```
 
+### GitHub Actions Workflows
+
+The project uses GitHub Actions workflows to automate development and release processes:
+
+1. **PR Tests** - Runs tests and linting on pull requests to the main branch
+   - Triggered on push to main and PRs to main
+   - Runs tests on Python 3.9, 3.10, and 3.11
+   - Uses uv for dependency management and package building
+
+2. **Code Style** - Runs pre-commit hooks to check code style
+   - Triggered on all pull requests
+   - Ensures code follows project style guidelines
+
+3. **Release Python Package** - Handles versioning and publishing to PyPI
+   - Can be triggered manually with version bump type (major, minor, patch)
+   - Automatically updates version, creates tag, and publishes to PyPI
+   - Creates GitHub release
+
+### Development Workflow
+
+1. Make changes on a feature branch
+2. Create a pull request to main to trigger tests
+3. When ready for release:
+   - Merge changes to main
+   - Trigger the Release Python Package workflow
+   - Choose version bump type (patch, minor, or major)
+
 ### Publish to PyPI
+
+The package is automatically published to PyPI when the release workflow is run. For manual publishing:
 
 ```bash
 uv build

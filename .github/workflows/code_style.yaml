@@ -1,0 +1,27 @@
+name: Code style checks
+
+on: [pull_request]
+
+jobs:
+  linting:
+    env:
+      UV_CACHE_DIR: /tmp/.uv-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Setup uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Install pre-commit
+        run: uv pip install pre-commit
+
+      - uses: pre-commit/action@v3.0.1
